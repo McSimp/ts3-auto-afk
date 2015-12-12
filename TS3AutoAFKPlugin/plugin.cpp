@@ -20,7 +20,7 @@ const char* ts3plugin_name()
 
 const char* ts3plugin_version()
 {
-    return "1.0";
+    return "1.1";
 }
 
 int ts3plugin_apiVersion()
@@ -35,7 +35,7 @@ const char* ts3plugin_author()
 
 const char* ts3plugin_description()
 {
-    return "This plugin will automatically set your status to AFK, mute your sound, and mute your microphone if you don't move your mouse or press any keys for 30 minutes.";
+    return "This plugin will automatically set your status to AFK, mute your sound, and mute your microphone if you don't move your mouse or press any keys for 10 minutes.";
 }
 
 void ts3plugin_setFunctionPointers(const struct TS3Functions funcs)
@@ -192,7 +192,7 @@ int ts3plugin_requestAutoload()
 int ts3plugin_init()
 {
 	shouldExitMonitorThread = false;
-	secondsForIdle = 30 * 60;
+	secondsForIdle = 10 * 60;
 	idleMonitorThread = std::thread(idleWatcher);
 	return 0;
 }

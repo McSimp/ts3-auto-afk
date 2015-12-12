@@ -2,14 +2,15 @@
 #define PLUGIN_HPP
 
 // Teamspeak SDK Headers
-#include "public_errors.h"
-#include "public_errors_rare.h"
-#include "public_definitions.h"
-#include "public_rare_definitions.h"
+#include "teamspeak/public_errors.h"
+#include "teamspeak/public_errors_rare.h"
+#include "teamspeak/public_definitions.h"
+#include "teamspeak/public_rare_definitions.h"
+#include "teamspeak/clientlib_publicdefinitions.h"
 #include "ts3_functions.h"
 
 #define PLUGINS_EXPORTDLL __declspec(dllexport)
-#define PLUGIN_API_VERSION 19
+#define PLUGIN_API_VERSION 20
 
 extern "C"
 {
